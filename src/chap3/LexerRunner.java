@@ -1,14 +1,15 @@
 package chap3;
 
-import chap3.CodeDialog;
+import stone.CodeDialog;
 import stone.ParseException;
 import stone.Token;
-import stone.lex;
+import stone.Lexer;
 
 public class LexerRunner {
     public static void main(String[] args) throws ParseException {
-        lex l = new lex(new CodeDialog());
+        Lexer l = new Lexer(new CodeDialog());
         for(Token t; (t = l.read())!= Token.EOF;)
-            System.out.println("=>"+t.getText()+t.isIdentifier()+t.isNumber()+t.isString());
+            if(!t.getText().equals("\\n"))
+            System.out.println("=>"+t.getText()+"  id:"+t.isIdentifier()+"  num:"+t.isNumber()+"  str:"+t.isString());
     }
 }

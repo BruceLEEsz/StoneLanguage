@@ -1,4 +1,4 @@
-package chap3;
+package stone;
 
 import java.io.FileReader;
 import java.io.BufferedReader;

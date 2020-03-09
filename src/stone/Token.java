@@ -27,7 +27,7 @@ public abstract class Token {
     }
 
     public int getNumber() {
-        throw new TokenException("not number token");
+        throw new StoneException("not number token");
     }
 
     public String getText() {
